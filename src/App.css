@@ -50,6 +50,7 @@ a {
   justify-content: center;
   gap: 2rem;
   padding: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -104,10 +105,118 @@ a {
   text-align: center;
   color: #888;
 }
+
 .art-card img {
   transition: transform 0.3s ease;
 }
 
 .art-card:hover img {
   transform: scale(1.05);
+}
+
+/* ---------------------------- */
+/* Responsive Styles */
+/* ---------------------------- */
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  .section {
+    padding: 1.5rem;
+    margin: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nav {
+    gap: 0.8rem;
+    padding: 10px;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+  }
+}
+/* Mobile (phones) */
+@media (max-width: 480px) {
+
+  /* Header */
+  .header {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Navbar stacks instead of being a long row */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 10px;
+  }
+
+  .nav-link {
+    width: 90%;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 1rem;
+    margin: 0.8rem;
+    max-width: 100%;
+  }
+
+  .section h2,
+  .section h3 {
+    font-size: 1.1rem;
+  }
+
+  .section p,
+  .section li {
+    font-size: 0.9rem;
+  }
 }
